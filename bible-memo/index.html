@@ -3,32 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>함께하는 성경암송 지원</title>
+<title>Bible Memorization Together Support</title>
 <style>
 body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.7}
+.lang{display:flex;gap:8px;justify-content:flex-end;margin-bottom:24px}
+.lang button{padding:8px 14px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;cursor:pointer}
+.lang button.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
 h2{margin-top:32px}
 </style>
 </head>
 <body>
-<h1>함께하는 성경암송 지원</h1>
-<p>함께하는 성경암송을 이용해 주셔서 감사합니다. 앱 사용 중 궁금한 점이나 문제가 있으시면 아래 안내를 확인해 주세요.</p>
+<div class="lang">
+<button id="btn-ko" onclick="setLang('ko')">한국어</button>
+<button id="btn-en" onclick="setLang('en')">English</button>
+</div>
 
-<h2>자주 묻는 질문</h2>
-<p><strong>Q. 암송 기록이 사라졌어요.</strong><br>앱을 삭제하거나 기기를 초기화하면 기기에 저장된 학습 기록이 삭제될 수 있습니다. 현재 앱은 별도 로그인 없이 사용되므로, 기기 변경 시 기록이 자동으로 이전되지 않을 수 있습니다.</p>
+<h1 data-ko="함께하는 성경암송 지원" data-en="Bible Memorization Together Support">함께하는 성경암송 지원</h1>
+<p data-ko="함께하는 성경암송을 이용해 주셔서 감사합니다. 앱 사용 중 궁금한 점이나 문제가 있으시면 아래 안내를 확인해 주세요." data-en="Thank you for using Bible Memorization Together. If you have questions or experience an issue, please review the information below.">함께하는 성경암송을 이용해 주셔서 감사합니다. 앱 사용 중 궁금한 점이나 문제가 있으시면 아래 안내를 확인해 주세요.</p>
 
-<p><strong>Q. 오디오가 재생되지 않아요.</strong><br>기기의 미디어 음량을 확인하고, 다른 앱에서 오디오가 재생 중인지 확인해 주세요. 그래도 문제가 지속되면 기기명, OS 버전, 앱 버전과 함께 문의해 주세요.</p>
+<h2 data-ko="자주 묻는 질문" data-en="Frequently Asked Questions">자주 묻는 질문</h2>
 
-<p><strong>Q. 광고가 표시되나요?</strong><br>본 앱은 Google AdMob 배너 광고를 사용할 수 있습니다.</p>
+<p><strong data-ko="Q. 암송 기록이 사라졌어요." data-en="Q. My memorization progress disappeared.">Q. 암송 기록이 사라졌어요.</strong><br>
+<span data-ko="앱을 삭제하거나 기기를 초기화하면 기기에 저장된 학습 기록이 삭제될 수 있습니다. 현재 앱은 별도 로그인 없이 사용되므로, 기기 변경 시 기록이 자동으로 이전되지 않을 수 있습니다." data-en="Progress stored on your device may be removed if you uninstall the app or reset your device. Because the app does not require an account, progress may not transfer automatically when you change devices.">앱을 삭제하거나 기기를 초기화하면 기기에 저장된 학습 기록이 삭제될 수 있습니다. 현재 앱은 별도 로그인 없이 사용되므로, 기기 변경 시 기록이 자동으로 이전되지 않을 수 있습니다.</span></p>
 
-<p><strong>Q. 로그인이 필요한가요?</strong><br>아니요. 별도의 회원가입이나 로그인 없이 앱을 사용할 수 있습니다.</p>
+<p><strong data-ko="Q. 오디오가 재생되지 않아요." data-en="Q. Audio does not play.">Q. 오디오가 재생되지 않아요.</strong><br>
+<span data-ko="기기의 미디어 음량을 확인하고, 다른 앱에서 오디오가 재생 중인지 확인해 주세요. 그래도 문제가 지속되면 기기명, OS 버전, 앱 버전과 함께 문의해 주세요." data-en="Check your device media volume and whether another app is playing audio. If the issue continues, contact us with your device model, OS version, and app version.">기기의 미디어 음량을 확인하고, 다른 앱에서 오디오가 재생 중인지 확인해 주세요. 그래도 문제가 지속되면 기기명, OS 버전, 앱 버전과 함께 문의해 주세요.</span></p>
 
-<h2>문의 및 오류 보고</h2>
-<p>이메일: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
-<p>문의 시 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주시면 도움이 됩니다.</p>
+<p><strong data-ko="Q. 광고가 표시되나요?" data-en="Q. Does the app show ads?">Q. 광고가 표시되나요?</strong><br>
+<span data-ko="본 앱은 Google AdMob 배너 광고를 사용할 수 있습니다." data-en="This app may display banner ads provided by Google AdMob.">본 앱은 Google AdMob 배너 광고를 사용할 수 있습니다.</span></p>
 
-<h2>개인정보처리방침</h2>
-<p><a href="../common/privacy.html">개인정보처리방침 보기</a></p>
+<p><strong data-ko="Q. 로그인이 필요한가요?" data-en="Q. Do I need an account?">Q. 로그인이 필요한가요?</strong><br>
+<span data-ko="아니요. 별도의 회원가입이나 로그인 없이 앱을 사용할 수 있습니다." data-en="No. You can use the app without creating an account or signing in.">아니요. 별도의 회원가입이나 로그인 없이 앱을 사용할 수 있습니다.</span></p>
 
-<p><a href="../">지원 홈으로 돌아가기</a></p>
+<h2 data-ko="문의 및 오류 보고" data-en="Contact and Bug Reports">문의 및 오류 보고</h2>
+<p><span data-ko="이메일" data-en="Email">이메일</span>: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
+<p data-ko="문의 시 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주시면 도움이 됩니다." data-en="When contacting us, please include the app version, device model, OS version, issue description, and steps to reproduce it.">문의 시 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주시면 도움이 됩니다.</p>
+
+<h2 data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</h2>
+<p><a href="../common/privacy.html" data-ko="개인정보처리방침 보기" data-en="View Privacy Policy">개인정보처리방침 보기</a></p>
+
+<p><a href="../" data-ko="지원 홈으로 돌아가기" data-en="Back to support home">지원 홈으로 돌아가기</a></p>
+
+<script>
+function setLang(lang){
+ document.querySelectorAll('[data-ko]').forEach(el=>{el.textContent=lang==='ko'?el.dataset.ko:el.dataset.en;});
+ document.documentElement.lang=lang;
+ document.getElementById('btn-ko').classList.toggle('active',lang==='ko');
+ document.getElementById('btn-en').classList.toggle('active',lang==='en');
+ localStorage.setItem('sowway-lang',lang);
+}
+const saved=localStorage.getItem('sowway-lang')||'ko';
+setLang(saved);
+</script>
 </body>
 </html>

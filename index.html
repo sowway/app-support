@@ -3,27 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>sowway 앱 지원</title>
+<title>sowway App Support</title>
 <style>
 body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;max-width:760px;margin:0 auto;padding:32px 20px;color:#222;line-height:1.65}
+.lang{display:flex;gap:8px;justify-content:flex-end;margin-bottom:24px}
+.lang button{padding:8px 14px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;cursor:pointer}
+.lang button.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
 .card{border:1px solid #e5e7eb;border-radius:14px;padding:20px;margin:18px 0}
 .btn{display:inline-block;margin-top:10px;padding:10px 16px;border-radius:8px;background:#1a73e8;color:#fff;text-decoration:none}
 footer{margin-top:40px;font-size:14px;color:#666}
 </style>
 </head>
 <body>
-<h1>sowway 앱 지원</h1>
-<p>sowway에서 제공하는 모바일 앱의 지원, 문의, 개인정보 안내 페이지입니다.</p>
+<div class="lang">
+<button id="btn-ko" onclick="setLang('ko')">한국어</button>
+<button id="btn-en" onclick="setLang('en')">English</button>
+</div>
+
+<h1 data-ko="sowway 앱 지원" data-en="sowway App Support">sowway 앱 지원</h1>
+<p data-ko="sowway에서 제공하는 모바일 앱의 지원, 문의, 개인정보 안내 페이지입니다." data-en="Support, contact, and privacy information for mobile apps provided by sowway.">sowway에서 제공하는 모바일 앱의 지원, 문의, 개인정보 안내 페이지입니다.</p>
 
 <div class="card">
-<h2>함께하는 성경암송</h2>
-<p>성경 구절을 함께 암송하고 학습 기록을 관리하는 앱입니다.</p>
-<a class="btn" href="bible-memo/">지원 페이지 보기</a>
+<h2 data-ko="함께하는 성경암송" data-en="Bible Memorization Together">함께하는 성경암송</h2>
+<p data-ko="성경 구절을 함께 암송하고 학습 기록을 관리하는 앱입니다." data-en="An app for memorizing Bible verses and managing your learning progress.">성경 구절을 함께 암송하고 학습 기록을 관리하는 앱입니다.</p>
+<a class="btn" href="bible-memo/" data-ko="지원 페이지 보기" data-en="Open support page">지원 페이지 보기</a>
 </div>
 
 <footer>
-<p>문의: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
-<p><a href="common/privacy.html">개인정보처리방침</a> · <a href="common/contact.html">문의하기</a></p>
+<p><span data-ko="문의" data-en="Contact">문의</span>: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
+<p><a href="common/privacy.html" data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</a> · <a href="common/contact.html" data-ko="문의하기" data-en="Contact">문의하기</a></p>
 </footer>
+
+<script>
+function setLang(lang){
+ document.querySelectorAll('[data-ko]').forEach(el=>{el.textContent=lang==='ko'?el.dataset.ko:el.dataset.en;});
+ document.documentElement.lang=lang;
+ document.getElementById('btn-ko').classList.toggle('active',lang==='ko');
+ document.getElementById('btn-en').classList.toggle('active',lang==='en');
+ localStorage.setItem('sowway-lang',lang);
+}
+const saved=localStorage.getItem('sowway-lang')||'ko';
+setLang(saved);
+</script>
 </body>
 </html>

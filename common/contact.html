@@ -3,23 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>문의하기 | sowway</title>
-<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.7}</style>
+<title>Contact | sowway</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.7}
+.lang{display:flex;gap:8px;justify-content:flex-end;margin-bottom:24px}
+.lang button{padding:8px 14px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;cursor:pointer}
+.lang button.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
+h2{margin-top:32px}
+</style>
 </head>
 <body>
-<h1>문의하기</h1>
-<p>앱 이용 중 문제가 있거나 개선 의견이 있으시면 아래 이메일로 연락해 주세요.</p>
-<p><strong>이메일:</strong> <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
+<div class="lang">
+<button id="btn-ko" onclick="setLang('ko')">한국어</button>
+<button id="btn-en" onclick="setLang('en')">English</button>
+</div>
 
-<h2>빠른 확인을 위해 알려주세요</h2>
+<h1 data-ko="문의하기" data-en="Contact Us">문의하기</h1>
+<p data-ko="앱 이용 중 문제가 있거나 개선 의견이 있으시면 아래 이메일로 연락해 주세요." data-en="If you experience an issue or have feedback, please contact us by email.">앱 이용 중 문제가 있거나 개선 의견이 있으시면 아래 이메일로 연락해 주세요.</p>
+<p><strong data-ko="이메일" data-en="Email">이메일</strong>: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
+
+<h2 data-ko="빠른 확인을 위해 알려주세요" data-en="Please Include">빠른 확인을 위해 알려주세요</h2>
 <ul>
-<li>앱 이름 및 앱 버전</li>
-<li>사용 기기와 Android 또는 iOS 버전</li>
-<li>문제가 발생한 화면</li>
-<li>문제 재현 방법</li>
-<li>가능하다면 스크린샷 또는 오류 메시지</li>
+<li data-ko="앱 이름 및 앱 버전" data-en="App name and app version">앱 이름 및 앱 버전</li>
+<li data-ko="사용 기기와 Android 또는 iOS 버전" data-en="Device model and Android or iOS version">사용 기기와 Android 또는 iOS 버전</li>
+<li data-ko="문제가 발생한 화면" data-en="The screen where the issue occurred">문제가 발생한 화면</li>
+<li data-ko="문제 재현 방법" data-en="Steps to reproduce the issue">문제 재현 방법</li>
+<li data-ko="가능하다면 스크린샷 또는 오류 메시지" data-en="Screenshots or error messages, if available">가능하다면 스크린샷 또는 오류 메시지</li>
 </ul>
 
-<p><a href="../">지원 홈으로 돌아가기</a></p>
+<p><a href="../" data-ko="지원 홈으로 돌아가기" data-en="Back to support home">지원 홈으로 돌아가기</a></p>
+
+<script>
+function setLang(lang){
+ document.querySelectorAll('[data-ko]').forEach(el=>{el.textContent=lang==='ko'?el.dataset.ko:el.dataset.en;});
+ document.documentElement.lang=lang;
+ document.getElementById('btn-ko').classList.toggle('active',lang==='ko');
+ document.getElementById('btn-en').classList.toggle('active',lang==='en');
+ localStorage.setItem('sowway-lang',lang);
+}
+const saved=localStorage.getItem('sowway-lang')||'ko';
+setLang(saved);
+</script>
 </body>
 </html>
