@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three Warriors of David Support</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.7}
+.lang{display:flex;gap:8px;justify-content:flex-end;margin-bottom:24px}
+.lang button{padding:8px 14px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;cursor:pointer}
+.lang button.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
+h2{margin-top:32px}
+</style>
+</head>
+<body>
+<div class="lang">
+<button id="btn-ko" onclick="setLang('ko')">한국어</button>
+<button id="btn-en" onclick="setLang('en')">English</button>
+</div>
+
+<h1 data-ko="Three Warriors of David 지원" data-en="Three Warriors of David Support">Three Warriors of David Support</h1>
+<p data-ko="Three Warriors of David는 로그라크 게임입니다. 게임 이용 중 궁금한 점이나 문제가 있으면 아래 안내를 확인해 주세요." data-en="Three Warriors of David is a roguelike game. If you have questions or run into a problem, please review the support information below.">Three Warriors of David is a roguelike game. If you have questions or run into a problem, please review the support information below.</p>
+
+<h2 data-ko="자주 묻는 질문" data-en="Frequently Asked Questions">자주 묻는 질문</h2>
+
+<p><strong data-ko="Q. 어떤 게임인가요?" data-en="Q. What kind of game is it?">Q. What kind of game is it?</strong><br>
+<span data-ko="Three Warriors of David는 로그라크 게임입니다." data-en="Three Warriors of David is a roguelike game.">Three Warriors of David is a roguelike game.</span></p>
+
+<p><strong data-ko="Q. 어떤 데이터가 저장되나요?" data-en="Q. What data does the app store?">Q. What data does the app store?</strong><br>
+<span data-ko="앱은 게임 저장 데이터만 취급하며, 개인정보를 수집하지 않습니다. 저장 데이터는 이용자의 기기에 저장됩니다." data-en="The app handles only game save data and does not collect personal information. Save data is stored on your device.">앱은 게임 저장 데이터만 취급하며, 개인정보를 수집하지 않습니다. 저장 데이터는 이용자의 기기에 저장됩니다.</span></p>
+
+<p><strong data-ko="Q. 저장 데이터가 사라졌어요." data-en="Q. My save data is missing.">Q. My save data is missing.</strong><br>
+<span data-ko="앱을 삭제하거나 기기의 앱 데이터를 지우면 저장 데이터가 삭제될 수 있습니다. 기기를 변경한 경우 저장 데이터가 자동으로 이전되지 않을 수 있습니다." data-en="Your save data may be deleted if you uninstall the app or clear its data from your device. Save data may not transfer automatically when you change devices.">앱을 삭제하거나 기기의 앱 데이터를 지우면 저장 데이터가 삭제될 수 있습니다. 기기를 변경한 경우 저장 데이터가 자동으로 이전되지 않을 수 있습니다.</span></p>
+
+<h2 data-ko="문의 및 오류 보고" data-en="Contact and Bug Reports">문의 및 오류 보고</h2>
+<p data-ko="문제가 있거나 도움이 필요하면 아래 이메일로 문의해 주세요." data-en="If you need help or encounter a problem, contact us by email.">문제가 있거나 도움이 필요하면 아래 이메일로 문의해 주세요.</p>
+<p><span data-ko="이메일" data-en="Email">이메일</span>: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
+<p data-ko="빠른 확인을 위해 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주세요." data-en="To help us investigate, include the app version, device model, OS version, issue description, and steps to reproduce it.">빠른 확인을 위해 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주세요.</p>
+
+<p><a href="../" data-ko="지원 홈으로 돌아가기" data-en="Back to support home">지원 홈으로 돌아가기</a></p>
+
+<script>
+function setLang(lang){
+ document.querySelectorAll('[data-ko]').forEach(el=>{el.textContent=lang==='ko'?el.dataset.ko:el.dataset.en;});
+ document.documentElement.lang=lang;
+ document.getElementById('btn-ko').classList.toggle('active',lang==='ko');
+ document.getElementById('btn-en').classList.toggle('active',lang==='en');
+ localStorage.setItem('dtw-lang',lang);
+}
+const saved=localStorage.getItem('dtw-lang')||'en';
+setLang(saved);
+</script>
+</body>
+</html>
