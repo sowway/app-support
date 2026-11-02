@@ -10,6 +10,10 @@ body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;max-width:760px;m
 .lang button{padding:8px 14px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;cursor:pointer}
 .lang button.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
 .card{border:1px solid #e5e7eb;border-radius:14px;padding:20px;margin:18px 0}
+.app{display:flex;gap:16px;align-items:center}
+.app img{width:72px;height:72px;border-radius:16px;flex-shrink:0}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn.alt{background:#fff;color:#1a73e8;border:1px solid #1a73e8}
 .btn{display:inline-block;margin-top:10px;padding:10px 16px;border-radius:8px;background:#1a73e8;color:#fff;text-decoration:none}
 footer{margin-top:40px;font-size:14px;color:#666}
 </style>
@@ -24,15 +28,31 @@ footer{margin-top:40px;font-size:14px;color:#666}
 <p data-ko="Bomofo Bible Studio 에서 제공하는 모바일 앱의 지원, 문의, 개인정보 안내 페이지입니다." data-en="Support, contact, and privacy information for mobile apps provided by Bomofo Bible Studio.">Bomofo Bible Studio에서 제공하는 모바일 앱의 지원, 문의, 개인정보 안내 페이지입니다.</p>
 
 <div class="card">
+<div class="app">
+<img src="bible-memo/BibleMemo_AppIcon512.png" alt="함께하는 성경암송">
+<div>
 <h2 data-ko="함께하는 성경암송" data-en="Bible Memorization Together">함께하는 성경암송</h2>
 <p data-ko="성경 구절을 함께 암송하고 학습 기록을 관리하는 앱입니다." data-en="An app for memorizing Bible verses and managing your learning progress.">성경 구절을 함께 암송하고 학습 기록을 관리하는 앱입니다.</p>
+</div>
+</div>
+<div class="btns">
 <a class="btn" href="bible-memo/" data-ko="지원 페이지 보기" data-en="Open support page">지원 페이지 보기</a>
+<a class="btn alt" href="bible-memo/privacy.html" data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</a>
+</div>
 </div>
 
 <div class="card">
+<div class="app">
+<img src="DTW/DTW_AppIcon.png" alt="Three Warriors of David">
+<div>
 <h2>Three Warriors of David</h2>
 <p data-ko="캐주얼 로그라이트 게임의 지원 및 저장 데이터 안내 페이지입니다." data-en="Support and save data information for the casual roguelite game.">캐주얼 로그라이트 게임의 지원 및 저장 데이터 안내 페이지입니다.</p>
-<a class="btn" href="DTW/" data-ko="Three Warriors of David 지원 페이지" data-en="Three Warriors of David Support Page">Three Warriors of David Support Page</a>
+</div>
+</div>
+<div class="btns">
+<a class="btn" href="DTW/" data-ko="지원 페이지 보기" data-en="Open support page">지원 페이지 보기</a>
+<a class="btn alt" href="DTW/privacy.html" data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</a>
+</div>
 </div>
 
 <footer>
