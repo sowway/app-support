@@ -1,0 +1,29 @@
+.support-page { background: var(--paper); }
+.support-page .language-switch button { padding: 6px 0; border: 0; background: none; color: #566679; font: inherit; font-size: 10px; font-weight: 600; cursor: pointer; }
+.support-page .language-switch button.active { color: var(--navy); font-weight: 800; }
+.support-page .page-header-link { color: var(--navy); font-size: 12px; font-weight: 700; }
+.support-page .page-header-link:hover { color: var(--blue); }
+.support-hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 85% 50%, #174b83 0%, transparent 42%), linear-gradient(115deg, #061a35, #092b55 60%, #0b3767); color: #fff; }
+.support-hero .container { padding-top: 70px; padding-bottom: 76px; }
+.support-hero .eyebrow { margin-bottom: 16px; }
+.support-hero h1 { max-width: 860px; margin: 0; font-size: clamp(32px, 4.5vw, 52px); line-height: 1.3; letter-spacing: -.04em; }
+.support-context { margin: 14px 0 0; color: #c9d6e5; font-size: 14px; }
+.document-wrap { padding: 64px 0 88px; }
+.document-content { max-width: 860px; padding: 44px 52px; border: 1px solid #ebe9e2; background: #fff; color: #34445a; font-size: 16px; line-height: 1.85; overflow-wrap: anywhere; }
+.document-content h2 { margin: 42px 0 14px; color: var(--navy); font-size: 21px; line-height: 1.45; letter-spacing: -.025em; scroll-margin-top: 130px; }
+.document-content p { margin: 0 0 18px; }
+.document-content ul { margin: 0 0 18px; padding-left: 24px; }
+.document-content li + li { margin-top: 6px; }
+.document-content strong { color: var(--ink); }
+.document-content a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.document-content a:hover { color: var(--navy-deep); }
+.document-content .policy-link { display: inline-block; padding: 10px 16px; background: var(--navy); color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
+.document-content .policy-link:hover { background: var(--blue); }
+.support-page a:focus-visible, .support-page button:focus-visible { outline: 3px solid #b4821e; outline-offset: 3px; }
+.support-page .footer-bottom { gap: 20px; }
+@media (max-width: 680px) {
+  .support-hero .container { padding-top: 50px; padding-bottom: 54px; }
+  .document-wrap { padding: 36px 0 60px; }
+  .document-content { padding: 26px 22px; font-size: 15px; }
+  .document-content h2 { margin-top: 34px; font-size: 19px; scroll-margin-top: 115px; }
+}

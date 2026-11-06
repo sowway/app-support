@@ -4,68 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Three Warriors of David Support</title>
-<style>
-body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.7}
-.lang{display:flex;gap:8px;justify-content:flex-end;margin-bottom:24px}
-.lang button{padding:8px 14px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;cursor:pointer}
-.lang button.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
-h2{margin-top:32px}
-.policy-link{display:inline-block;padding:10px 16px;border-radius:8px;background:#1a73e8;color:#fff;text-decoration:none}
-</style>
+<meta name="theme-color" content="#092b55">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../common/support.css">
 </head>
-<body>
-<div class="lang">
-<button id="btn-ko" onclick="setLang('ko')">한국어</button>
-<button id="btn-en" onclick="setLang('en')">English</button>
-</div>
+<body class="support-page" id="top">
+<header class="site-header">
+  <div class="language-switch">
+    <div class="container language-switch-inner" role="group" aria-label="Language selection">
+      <button type="button" data-language="ko" aria-pressed="false" lang="ko">한국어</button>
+      <button type="button" data-language="en" class="active" aria-pressed="true" lang="en">English</button>
+    </div>
+  </div>
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html?lang=en" data-language-link aria-label="Bomofo Bible Studio">
+      <span class="brand-mark">B</span><span class="brand-name">BOMOFO <small>BIBLE STUDIO</small></span>
+    </a>
+    <a class="page-header-link" href="../index.html?lang=en" data-language-link data-ko="홈으로" data-en="Home">Home</a>
+  </div>
+</header>
+<main>
+  <section class="support-hero">
+    <div class="container">
+      <p class="eyebrow"><span></span>SUPPORT</p>
+      <h1 data-ko="Three Warriors of David 지원" data-en="Three Warriors of David Support">Three Warriors of David Support</h1>
+      <p class="support-context" data-ko="Three Warriors of David" data-en="Three Warriors of David">Three Warriors of David</p>
+    </div>
+  </section>
+  <section class="document-wrap">
+    <div class="container document-content">
 
-<h1 data-ko="Three Warriors of David 지원" data-en="Three Warriors of David Support">Three Warriors of David Support</h1>
 <p data-ko="Three Warriors of David는 캐주얼 로그라이트 게임입니다. 게임 이용 중 궁금한 점이나 문제가 있으면 아래 안내를 확인해 주세요." data-en="Three Warriors of David is a casual roguelite game. If you have questions or run into a problem, please review the support information below.">Three Warriors of David is a casual roguelite game. If you have questions or run into a problem, please review the support information below.</p>
 
-<h2 data-ko="버전 안내" data-en="Versions">버전 안내</h2>
-<p data-ko="Three Warriors of David는 기본 버전과 프로 버전으로 제공됩니다. 프로 버전은 광고가 없고 재화를 더 많이 획득할 수 있으며, 그 외 내용은 기본 버전과 동일합니다. 두 버전은 같은 지원 페이지와 개인정보처리방침을 사용합니다." data-en="Three Warriors of David is available in a standard version and a Pro version. The Pro version has no ads and lets you earn more currency; everything else is the same as the standard version. Both versions share this support page and the same Privacy Policy.">Three Warriors of David는 기본 버전과 프로 버전으로 제공됩니다. 프로 버전은 광고가 없고 재화를 더 많이 획득할 수 있으며, 그 외 내용은 기본 버전과 동일합니다. 두 버전은 같은 지원 페이지와 개인정보처리방침을 사용합니다.</p>
+<h2 data-ko="버전 안내" data-en="Versions">Versions</h2>
+<p data-ko="Three Warriors of David는 기본 버전과 프로 버전으로 제공됩니다. 프로 버전은 광고가 없고 재화를 더 많이 획득할 수 있으며, 그 외 내용은 기본 버전과 동일합니다. 두 버전은 같은 지원 페이지와 개인정보처리방침을 사용합니다." data-en="Three Warriors of David is available in a standard version and a Pro version. The Pro version has no ads and lets you earn more currency; everything else is the same as the standard version. Both versions share this support page and the same Privacy Policy.">Three Warriors of David is available in a standard version and a Pro version. The Pro version has no ads and lets you earn more currency; everything else is the same as the standard version. Both versions share this support page and the same Privacy Policy.</p>
 
-<h2 data-ko="자주 묻는 질문" data-en="Frequently Asked Questions">자주 묻는 질문</h2>
+<h2 data-ko="자주 묻는 질문" data-en="Frequently Asked Questions">Frequently Asked Questions</h2>
 
 <p><strong data-ko="Q. 어떤 게임인가요?" data-en="Q. What kind of game is it?">Q. What kind of game is it?</strong><br>
 <span data-ko="Three Warriors of David는 캐주얼 로그라이트 게임입니다." data-en="Three Warriors of David is a casual roguelite game.">Three Warriors of David is a casual roguelite game.</span></p>
 
 <p><strong data-ko="Q. 프로 버전은 기본 버전과 무엇이 다른가요?" data-en="Q. How is the Pro version different?">Q. How is the Pro version different?</strong><br>
-<span data-ko="프로 버전은 광고가 표시되지 않고 재화를 더 많이 획득할 수 있습니다. 그 외 게임 내용과 데이터 처리 방식은 동일합니다." data-en="The Pro version shows no ads and lets you earn more currency. The game content and data handling are otherwise the same.">프로 버전은 광고가 표시되지 않고 재화를 더 많이 획득할 수 있습니다. 그 외 게임 내용과 데이터 처리 방식은 동일합니다.</span></p>
+<span data-ko="프로 버전은 광고가 표시되지 않고 재화를 더 많이 획득할 수 있습니다. 그 외 게임 내용과 데이터 처리 방식은 동일합니다." data-en="The Pro version shows no ads and lets you earn more currency. The game content and data handling are otherwise the same.">The Pro version shows no ads and lets you earn more currency. The game content and data handling are otherwise the same.</span></p>
 
 <p><strong data-ko="Q. 어떤 데이터가 저장되나요?" data-en="Q. What data does the app store?">Q. What data does the app store?</strong><br>
-<span data-ko="앱은 게임 저장 데이터만 취급하며, 개인정보를 수집하지 않습니다. 저장 데이터는 이용자의 기기에 저장됩니다." data-en="The app handles only game save data and does not collect personal information. Save data is stored on your device.">앱은 게임 저장 데이터만 취급하며, 개인정보를 수집하지 않습니다. 저장 데이터는 이용자의 기기에 저장됩니다.</span></p>
+<span data-ko="앱은 게임 저장 데이터만 취급하며, 개인정보를 수집하지 않습니다. 저장 데이터는 이용자의 기기에 저장됩니다." data-en="The app handles only game save data and does not collect personal information. Save data is stored on your device.">The app handles only game save data and does not collect personal information. Save data is stored on your device.</span></p>
 
 <p><strong data-ko="Q. 저장 데이터가 사라졌어요." data-en="Q. My save data is missing.">Q. My save data is missing.</strong><br>
-<span data-ko="앱을 삭제하거나 기기의 앱 데이터를 지우면 저장 데이터가 삭제될 수 있습니다. 기기를 변경한 경우 저장 데이터가 자동으로 이전되지 않을 수 있습니다." data-en="Your save data may be deleted if you uninstall the app or clear its data from your device. Save data may not transfer automatically when you change devices.">앱을 삭제하거나 기기의 앱 데이터를 지우면 저장 데이터가 삭제될 수 있습니다. 기기를 변경한 경우 저장 데이터가 자동으로 이전되지 않을 수 있습니다.</span></p>
+<span data-ko="앱을 삭제하거나 기기의 앱 데이터를 지우면 저장 데이터가 삭제될 수 있습니다. 기기를 변경한 경우 저장 데이터가 자동으로 이전되지 않을 수 있습니다." data-en="Your save data may be deleted if you uninstall the app or clear its data from your device. Save data may not transfer automatically when you change devices.">Your save data may be deleted if you uninstall the app or clear its data from your device. Save data may not transfer automatically when you change devices.</span></p>
 
 <h2 id="data-deletion" data-ko="데이터 삭제 방법" data-en="How to Delete Data">How to Delete Data</h2>
 <p data-ko="게임 저장 데이터는 기기에 저장됩니다. 삭제 후 복구할 수 없으니 필요한 데이터가 있다면 먼저 보관해 주세요." data-en="Game save data is stored on your device. Deleted data cannot be recovered, so save anything you need before deleting it.">Game save data is stored on your device. Deleted data cannot be recovered, so save anything you need before deleting it.</p>
 <p><strong data-ko="Android" data-en="Android">Android</strong><br>
-<span data-ko="기기 설정에서 앱(또는 앱 관리) &gt; Three Warriors of David &gt; 저장공간으로 이동해 데이터 삭제 또는 저장공간 비우기를 선택하세요. 메뉴 이름과 위치는 기기 및 Android 버전에 따라 다를 수 있습니다." data-en="In your device settings, go to Apps (or App management) &gt; Three Warriors of David &gt; Storage, then select Clear data or Clear storage. Menu names and locations may vary by device and Android version.">기기 설정에서 앱(또는 앱 관리) &gt; Three Warriors of David &gt; 저장공간으로 이동해 데이터 삭제 또는 저장공간 비우기를 선택하세요. 메뉴 이름과 위치는 기기 및 Android 버전에 따라 다를 수 있습니다.</span></p>
+<span data-ko="기기 설정에서 앱(또는 앱 관리) &gt; Three Warriors of David &gt; 저장공간으로 이동해 데이터 삭제 또는 저장공간 비우기를 선택하세요. 메뉴 이름과 위치는 기기 및 Android 버전에 따라 다를 수 있습니다." data-en="In your device settings, go to Apps (or App management) &gt; Three Warriors of David &gt; Storage, then select Clear data or Clear storage. Menu names and locations may vary by device and Android version.">In your device settings, go to Apps (or App management) &gt; Three Warriors of David &gt; Storage, then select Clear data or Clear storage. Menu names and locations may vary by device and Android version.</span></p>
 <p><strong data-ko="iPhone 또는 iPad" data-en="iPhone or iPad">iPhone or iPad</strong><br>
-<span data-ko="홈 화면에서 앱 아이콘을 길게 누르고 앱 제거 &gt; 앱 삭제를 선택하세요. 설정 &gt; 일반 &gt; iPhone 저장 공간에서도 앱을 선택한 뒤 앱 삭제를 할 수 있습니다. 앱 정리하기가 아니라 앱 삭제를 선택해야 기기에 저장된 앱 데이터도 함께 삭제됩니다." data-en="Touch and hold the app icon on the Home Screen, then choose Remove App &gt; Delete App. You can also go to Settings &gt; General &gt; iPhone Storage, select the app, and tap Delete App. Choose Delete App, not Offload App, to remove the app's data stored on your device as well.">홈 화면에서 앱 아이콘을 길게 누르고 앱 제거 &gt; 앱 삭제를 선택하세요. 설정 &gt; 일반 &gt; iPhone 저장 공간에서도 앱을 선택한 뒤 앱 삭제를 할 수 있습니다. 앱 정리하기가 아니라 앱 삭제를 선택해야 기기에 저장된 앱 데이터도 함께 삭제됩니다.</span></p>
+<span data-ko="홈 화면에서 앱 아이콘을 길게 누르고 앱 제거 &gt; 앱 삭제를 선택하세요. 설정 &gt; 일반 &gt; iPhone 저장 공간에서도 앱을 선택한 뒤 앱 삭제를 할 수 있습니다. 앱 정리하기가 아니라 앱 삭제를 선택해야 기기에 저장된 앱 데이터도 함께 삭제됩니다." data-en="Touch and hold the app icon on the Home Screen, then choose Remove App &gt; Delete App. You can also go to Settings &gt; General &gt; iPhone Storage, select the app, and tap Delete App. Choose Delete App, not Offload App, to remove the app's data stored on your device as well.">Touch and hold the app icon on the Home Screen, then choose Remove App &gt; Delete App. You can also go to Settings &gt; General &gt; iPhone Storage, select the app, and tap Delete App. Choose Delete App, not Offload App, to remove the app's data stored on your device as well.</span></p>
 
-<h2 data-ko="개인정보처리방침" data-en="Privacy Policy">개인정보처리방침</h2>
-<p><a class="policy-link" href="privacy.html" data-ko="개인정보처리방침 보기" data-en="View Privacy Policy">개인정보처리방침 보기</a></p>
+<h2 data-ko="개인정보처리방침" data-en="Privacy Policy">Privacy Policy</h2>
+<p><a class="policy-link" href="privacy.html?lang=en" data-language-link data-ko="개인정보처리방침 보기" data-en="View Privacy Policy">View Privacy Policy</a></p>
 
-<h2 data-ko="문의 및 오류 보고" data-en="Contact and Bug Reports">문의 및 오류 보고</h2>
-<p data-ko="문제가 있거나 도움이 필요하면 아래 이메일로 문의해 주세요." data-en="If you need help or encounter a problem, contact us by email.">문제가 있거나 도움이 필요하면 아래 이메일로 문의해 주세요.</p>
-<p><span data-ko="이메일" data-en="Email">이메일</span>: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
-<p data-ko="빠른 확인을 위해 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주세요." data-en="To help us investigate, include the app version, device model, OS version, issue description, and steps to reproduce it.">빠른 확인을 위해 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주세요.</p>
+<h2 data-ko="문의 및 오류 보고" data-en="Contact and Bug Reports">Contact and Bug Reports</h2>
+<p data-ko="문제가 있거나 도움이 필요하면 아래 이메일로 문의해 주세요." data-en="If you need help or encounter a problem, contact us by email.">If you need help or encounter a problem, contact us by email.</p>
+<p><span data-ko="이메일" data-en="Email">Email</span>: <a href="mailto:sowway@naver.com">sowway@naver.com</a></p>
+<p data-ko="빠른 확인을 위해 앱 버전, 기기명, OS 버전, 문제 상황과 재현 방법을 함께 보내주세요." data-en="To help us investigate, include the app version, device model, OS version, issue description, and steps to reproduce it.">To help us investigate, include the app version, device model, OS version, issue description, and steps to reproduce it.</p>
 
-<p><a href="../" data-ko="지원 홈으로 돌아가기" data-en="Back to support home">지원 홈으로 돌아가기</a></p>
+<p><a href="../index.html?lang=en" data-language-link data-ko="지원 홈으로 돌아가기" data-en="Back to support home">Back to support home</a></p>
 
-<script>
-function setLang(lang){
- document.querySelectorAll('[data-ko]').forEach(el=>{el.textContent=lang==='ko'?el.dataset.ko:el.dataset.en;});
- document.documentElement.lang=lang;
- document.getElementById('btn-ko').classList.toggle('active',lang==='ko');
- document.getElementById('btn-en').classList.toggle('active',lang==='en');
- localStorage.setItem('dtw-lang',lang);
-}
-const saved=localStorage.getItem('dtw-lang')||'en';
-setLang(saved);
-</script>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-top">
+    <a class="brand footer-brand" href="../index.html?lang=en" data-language-link aria-label="Bomofo Bible Studio">
+      <span class="brand-mark">B</span><span class="brand-name">BOMOFO <small>BIBLE STUDIO</small></span>
+    </a>
+    <p>New Culture, Timeless Gospel.</p>
+  </div>
+  <div class="container footer-bottom">
+    <span>© Bomofo Bible Studio. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="../common/contact.html?lang=en" data-language-link data-ko="문의하기" data-en="Contact">Contact</a>
+      <a href="#top" data-ko="맨 위로 ↑" data-en="Back to top ↑">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+<script src="../common/language.js" defer></script>
 </body>
 </html>
