@@ -1,6 +1,4 @@
 .support-page { background: var(--paper); }
-.support-page .language-switch button { padding: 6px 0; border: 0; background: none; color: #566679; font: inherit; font-size: 10px; font-weight: 600; cursor: pointer; }
-.support-page .language-switch button.active { color: var(--navy); font-weight: 800; }
 .support-page .page-header-link { color: var(--navy); font-size: 12px; font-weight: 700; }
 .support-page .page-header-link:hover { color: var(--blue); }
 .support-hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 85% 50%, #174b83 0%, transparent 42%), linear-gradient(115deg, #061a35, #092b55 60%, #0b3767); color: #fff; }
